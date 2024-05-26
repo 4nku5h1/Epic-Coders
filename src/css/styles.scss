@@ -25,6 +25,18 @@
   all: unset;
 }
 
+.page2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 32px 0 32px !important;
+  margin: -2px;
+  transition: background-color 0.8s ease;
+  background-color: var(--themer-background);
+  overflow-x: hidden;
+}
+
 .dummy {
   display: none;
 }
@@ -44,6 +56,12 @@
 
   .container {
     width: var(--container-width-mobile);
+    align-items: flex-start;
+  }
+
+  .page2 {
+    padding: 0;
+    padding-bottom: 40%;
     align-items: flex-start;
   }
 }

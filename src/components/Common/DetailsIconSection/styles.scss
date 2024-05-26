@@ -1,4 +1,4 @@
-.details-section {
+.details-icon-section {
     align-self: center;
     width: 75%;
     margin: 15% 0;
@@ -10,6 +10,7 @@
     }
 
     p {
+        word-wrap: break-word;
         font-size: 28px;
         line-height: 37px;
         margin-bottom: 60px;
@@ -18,7 +19,6 @@
     .items {
         text-transform: uppercase;
         margin-bottom: 15px;
-        width: 30%;
         color: var(--themer-content);
 
         span {
@@ -32,26 +32,21 @@
 
         .item-inner {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-            > {
-                align-self: flex-start;
+            .item-logo {
+                width: 56px;
+                height: 56px;
             }
-        }
-
-        .bullet {
-            align-self: center;
-            $bullet-size: 10px;
-            width: $bullet-size;
-            height: $bullet-size;
-            margin-right: 20px;
-            background-color: var(--themer-content);
         }
     }
 
 }
 
 @media only screen and (max-width:480px) {
-    .details-section {
+    .details-icon-section {
         width: 100%;
         margin: 30% 0;
 
@@ -61,33 +56,38 @@
         }
 
         p {
+            text-wrap: wrap;
             font-size: 21px;
             line-height: 28px;
         }
 
         .items {
             text-transform: uppercase;
-            margin-bottom: 20px;
-            width: 100%;
+            margin-bottom: 60px !important;
+            width: 155px;
+            height: 134px;
             color: var(--themer-content);
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .item-inner {
                 display: flex;
-            }
+                justify-content: center;
+                align-items: center;
 
-            .bullet {
-                align-self: center;
-                $bullet-size: 10px;
-                width: $bullet-size;
-                height: $bullet-size;
-                margin-right: 20px;
-                background-color: var(--themer-content);
+                .item-logo {
+                    object-fit: contain;
+                    width: 100px;
+                    height: 56px;
+                }
             }
 
             span {
+                margin-top: 16px;
                 width: 100%;
+                text-align: center;
                 font-size: 12px;
-
             }
         }
 

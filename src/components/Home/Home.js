@@ -1,42 +1,130 @@
-import Banner from './Banner';
-import ImageGridBanner from '../Common/ImageGridBanner/ImageGridBanner';
-import About from '../About/About';
+import Banner from "./Banner/Banner";
+import ImageGridBanner from "../Common/ImageGridBanner/ImageGridBanner";
+import About from "../About/About";
 
-import './styles.scss';
-import Stats from './Stats/Stats';
-import imageEditing from '../../assets/home/imageEditing.jpg'
-import videoEditing from '../../assets/home/videoEditing.jpg'
-import softwareDevelopment from '../../assets/home/softwareDevelopment.jpg'
+import softwareDevelopment from "../../assets/home/softwareDevelopment.jpg";
 
-import MaterialPage from '../Common/MaterialPage/MaterialPage';
+import MaterialPage from "../Common/MaterialPage/MaterialPage";
+
+import "./styles.scss";
+import DetailsIconSection from "../Common/DetailsIconSection/DetailsIconSection";
+import Page from "../Common/Page/Page";
+import DetailsSection from "../Common/DetailsSection/DetailsSection";
+
+import reactNativeLogo from "../../assets/technologies/react-native.png";
+import nextLogo from "../../assets/technologies/next.webp";
+import flutterLogo from "../../assets/technologies/flutter.webp";
+import graphqlLogo from "../../assets/technologies/graphql.png";
+import nodeLogo from "../../assets/technologies/node.webp";
+import postgressLogo from "../../assets/technologies/postgress.png";
+import devopsLogo from "../../assets/technologies/devops.webp";
+import springLogo from "../../assets/technologies/spring.svg";
+
+import partnerVercelLogo from "../../assets/partners/vercel.png";
+import partnerGithubLogo from "../../assets/partners/github.png";
+import partnerAwsLogo from "../../assets/partners/aws.png";
 
 export default function Home() {
-    return (
-        <>
-            <Banner uid='HOME' />
-            <MaterialPage
-                uid={"SERVICE-IMAGE-EDITING"}
-                imageOptions={{ default:true, image:  imageEditing}}
-                title={"Image Editing"}
-                description={"Unlock the true potential of your images with our professional image editing services.  Our skilled team enhances every detail, resulting in captivating visuals that make a lasting impact."}
-                buttonOptions={{ label: 'Explore More', path:'image-editing-services' }}
-            />
-            <MaterialPage
-                uid={"SERVICE-VIDEO-EDITING"}
-                imageOptions={{ default:true, image:  videoEditing}}
-                title={"Video Editing"}
-                description={"Experience the art of storytelling through our expert video editing. Our skilled editors craft each frame to create captivating narratives that leave a lasting impression."}
-                buttonOptions={{ label: 'Explore More', path:'video-editing-services' }}
-            />
-            <MaterialPage
-                uid={"SERVICE-IMAGE-SOFTWARE"}
-                imageOptions={{ default:true, image:  softwareDevelopment}}
-                title={"Software Development"}
-                description={"Embark on a journey of innovation with our software development expertise. Our seasoned team turns your ideas into functional solutions, employing cutting-edge technology to drive your success. Experience tailored development that meets your unique needs and propels your business forward."}
-                buttonOptions={{ label: 'Coming Soon...' }}
-            />
-            <ImageGridBanner uid="GALLERY" />
-            <About uid='ABOUT' />
-        </>
-    )
+  return (
+    <>
+      <Page fullViewHeight>
+        <Banner uid="HOME" />
+      </Page>
+
+      <Page>
+        <DetailsSection
+          uid="SERVICE-DETAILS-SECTION"
+          heading={"We Deliver Extraordinary Digital Experiences."}
+          items={[
+            "Using AI for now and future",
+            "Design experience that leaves an impact",
+            "Architecture that scales to millions",
+            "Standarized approach for speed & quality",
+          ]}
+          itemClass={"service-how-item"}
+        />
+      </Page>
+      <Page>
+        <DetailsIconSection
+          uid="SERVICE-DETAILS-SECTION"
+          heading={"Certified Partners"}
+          items={[
+            {
+              icon: partnerVercelLogo,
+            },
+            {
+              icon: partnerGithubLogo,
+            },
+            {
+              icon: partnerAwsLogo,
+            },
+          ]}
+          itemClass={"partner-item"}
+        />
+      </Page>
+      <Page>
+        <DetailsIconSection
+          uid="SERVICE-DETAILS-SECTION"
+          heading={"Technologies"}
+          paragraph={
+            "We work with cutting-edge technologies designed to solve your product requirements. Focus on finding solutions for your business needs while we handle the technical aspect."
+          }
+          items={[
+            {
+              title: "React Native",
+              icon: reactNativeLogo,
+            },
+            {
+              title: "Next.js",
+              icon: nextLogo,
+            },
+            {
+              title: "Flutter",
+              icon: flutterLogo,
+            },
+            {
+              title: "Spring Boot",
+              icon: springLogo,
+            },
+            {
+              title: "GraphQL",
+              icon: graphqlLogo,
+            },
+            {
+              title: "Node.js",
+              icon: nodeLogo,
+            },
+            {
+              title: "PostgreSQL",
+              icon: postgressLogo,
+            },
+            {
+              title: "DevOps",
+              icon: devopsLogo,
+            },
+            {
+              title: "Flutter",
+              icon: flutterLogo,
+            },
+          ]}
+          itemClass={"technologies-item"}
+        />
+      </Page>
+
+      {/* <MaterialPage
+        uid={"SERVICE-SOFTWARE"}
+        imageOptions={{ default: true, image: softwareDevelopment }}
+        title={"Software Development"}
+        description={
+          "Embark on a journey of innovation with our software development expertise. Our seasoned team turns your ideas into functional solutions, employing cutting-edge technology to drive your success. Experience tailored development that meets your unique needs and propels your business forward."
+        }
+        buttonOptions={{
+          label: "Explore More",
+          path: "software-development-services",
+        }}
+      /> */}
+      <ImageGridBanner uid="GALLERY" />
+      <About uid="ABOUT" />
+    </>
+  );
 }
