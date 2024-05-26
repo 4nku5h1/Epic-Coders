@@ -13,25 +13,30 @@ const commonConfig = {
 // for '/'
 export const homeConfig = {
   ...commonConfig,
-  HOME: {
-    pageName: "HOME",
+  HOME_BANNER: {
+    pageName: "Epic Coders",
     ...theme.themeDark,
     showFullDynamicIsland: true,
     backgroundColor: "transparent",
   },
-  "SERVICE-IMAGE-EDITING": {
+  "SERVICE-HOW-SECTION": {
+    ...theme.themeDark,
+    pageName: "SERVICES",
+    id: "SERVICE-OVERVIEW",
+  },
+  "PARTNERS-SECTION": {
     ...theme.themeGray,
     pageName: "SERVICES",
     id: "SERVICE-OVERVIEW",
   },
-  "SERVICE-VIDEO-EDITING": {
+  // "PARTNERS-SECTION": {
+  //   ...theme.themeLight,
+  //   pageName: "SERVICES",
+  //   id: "SERVICE-OVERVIEW",
+  //   backgroundColor: "#F0F0F0",
+  // },
+  "TECHNOLOGY-SECTION": {
     ...theme.themeLight,
-    pageName: "SERVICES",
-    id: "SERVICE-OVERVIEW",
-    backgroundColor: "#F0F0F0",
-  },
-  "SERVICE-SOFTWARE": {
-    ...theme.themeDark,
     pageName: "SERVICES",
     id: "SERVICE-OVERVIEW",
   },
@@ -40,7 +45,7 @@ export const homeConfig = {
     pageName: "GALLERY",
   },
   ABOUT: {
-    ...theme.themeDark,
+    ...theme.themeGray,
     pageName: "ABOUT",
   },
 };

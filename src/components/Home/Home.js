@@ -28,25 +28,29 @@ export default function Home() {
   return (
     <>
       <Page fullViewHeight>
-        <Banner uid="HOME" />
+        <Banner uid="HOME_BANNER" />
       </Page>
 
       <Page>
         <DetailsSection
-          uid="SERVICE-DETAILS-SECTION"
+          uid="SERVICE-HOW-SECTION"
           heading={"We Deliver Extraordinary Digital Experiences."}
           items={[
             "Using AI for now and future",
             "Design experience that leaves an impact",
             "Architecture that scales to millions",
             "Standarized approach for speed & quality",
+            "Real-Time Insights",
+            "Secure Solutions",
+            "User-Centric Design",
+            "Using Agile Methodologies",
           ]}
           itemClass={"service-how-item"}
         />
       </Page>
       <Page>
         <DetailsIconSection
-          uid="SERVICE-DETAILS-SECTION"
+          uid="PARTNERS-SECTION"
           heading={"Certified Partners"}
           items={[
             {
@@ -64,7 +68,7 @@ export default function Home() {
       </Page>
       <Page>
         <DetailsIconSection
-          uid="SERVICE-DETAILS-SECTION"
+          uid="TECHNOLOGY-SECTION"
           heading={"Technologies"}
           paragraph={
             "We work with cutting-edge technologies designed to solve your product requirements. Focus on finding solutions for your business needs while we handle the technical aspect."

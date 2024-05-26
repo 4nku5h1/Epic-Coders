@@ -123,6 +123,14 @@ $transition : all 0.7s;
         border-radius: 0;
     }
 
+    .dynamic-island-container.expand {
+        padding: $nav-spacing calc(50% - ($panel-width/2));
+        margin: 0;
+        width: 102vw;
+        transition-delay: 0.3s;
+        border-radius: 0;
+    }
+
     .dynamic-island-container.shrink {
         background-color: transparent;
     }

@@ -300,21 +300,21 @@ export const videoServices = [
 ];
 
 const clientNames = [
-  "GOLD MARK",
-  "Geeky Estate",
-  "BIMBRA",
-  "IGNITE CREATIVE",
-  "INTERPRETING",
+  "PROMAN",
+  "Geek For Geeks",
+  "BIMRA 4x4",
+  "Newton School",
+  "Zenpact",
   "FOX MORTGAGE",
-  "RHINO",
-  "CITI ESTATE",
-  "NEON TREE",
+  "E-Cart",
+  "CITI BANK",
+  "AIG INSURANCE",
   "GREEN STREET",
-  "CHOPSTYX",
-  "ROTNGRX",
-  "AURA",
-  "ENLIVEN SENIOR",
-  "HOUSES MART",
+  "WOW",
+  "RENTOMOJO",
+  "HEALTHIFY",
+  "24 SEVEN",
+  "T&T",
 ];
 const clientDescription =
   "Our dedication to delivering exceptional quality and exceeding expectations has earned us the trust and loyalty of countless individuals, businesses, and creative professionals. From aspiring photographers to established studios, from e-commerce entrepreneurs to advertising agencies, our client list encompasses a diverse range of industries and creative pursuits.";

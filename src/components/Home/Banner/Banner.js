@@ -6,7 +6,7 @@ import "./styles.scss";
 
 export default function Banner({ uid }) {
   return (
-    <div className="text-banner">
+    <div className="text-banner" id={uid}>
       <div className="banner-logo-container">
         <Logo size={10} showSubtitle={false} />
       </div>

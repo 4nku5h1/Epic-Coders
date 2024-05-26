@@ -3,6 +3,7 @@ import React from 'react';
 import './styles.scss'
 import { Link } from 'react-router-dom';
 import { scrollToId } from '../../Common/helper';
+import Logo from '../../Logo/Logo';
 
 export default function NavDesktop({ actions = [] }) {
     function NavAction(action) {
@@ -21,7 +22,7 @@ export default function NavDesktop({ actions = [] }) {
     return (
         <div className='navbar' id='navbar'>
             <div className='nav-logo'>
-                <h2>PIXO<span>BREW</span></h2>
+            <Logo size={10} showSubtitle={false}></Logo>
             </div>
             <div className='nav-items'>
                 {actions.map((act) => <NavAction {...act} />)}

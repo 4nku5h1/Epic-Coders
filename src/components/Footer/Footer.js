@@ -2,10 +2,13 @@ import { contactData, socialdata } from "./data.js";
 
 import './styles.scss';
 import Logo from "../Logo/Logo";
+import Galaxy from "../Common/Galaxy/Galaxy.js";
 
 export default function Footer() {
     return (
         <div className='page footer'>
+
+      <Galaxy position="CURRENT"/>
             <div className="container">
                 <Logo size={10} />
                 <div className="talk-to-us">
