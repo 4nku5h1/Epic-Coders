@@ -1,7 +1,7 @@
 const colorConfig = {
     headingLight: '#E3E3E3',
-    headingDark: '#111111',
-    contentDark: '#5E5E5E',
+    headingDark: '#3c4043',
+    contentDark: '#3c4043',
     contentLight:'#999999',
     borderDark: '#525252',
     borderLight: '#e4d6d6',

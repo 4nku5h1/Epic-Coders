@@ -15,17 +15,16 @@ export const homeConfig = {
   ...commonConfig,
   HOME_BANNER: {
     pageName: "Epic Coders",
-    ...theme.themeDark,
+    ...theme.themeLight,
     showFullDynamicIsland: true,
-    backgroundColor: "transparent",
   },
   "SERVICE-HOW-SECTION": {
-    ...theme.themeDark,
+    ...theme.themeLight,
     pageName: "SERVICES",
     id: "SERVICE-OVERVIEW",
   },
   "PARTNERS-SECTION": {
-    ...theme.themeGray,
+    ...theme.themeLight,
     pageName: "SERVICES",
     id: "SERVICE-OVERVIEW",
   },
@@ -41,11 +40,11 @@ export const homeConfig = {
     id: "SERVICE-OVERVIEW",
   },
   GALLERY: {
-    ...theme.themeDark,
+    ...theme.themeLight,
     pageName: "GALLERY",
   },
   ABOUT: {
-    ...theme.themeGray,
+    ...theme.themeLight,
     pageName: "ABOUT",
   },
 };

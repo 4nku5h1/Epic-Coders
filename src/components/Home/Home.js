@@ -45,6 +45,7 @@ export default function Home() {
             "User-Centric Design",
             "Using Agile Methodologies",
           ]}
+          containerClass={"service-how-container"}
           itemClass={"service-how-item"}
         />
       </Page>
@@ -62,16 +63,26 @@ export default function Home() {
             {
               icon: partnerAwsLogo,
             },
+            {
+              icon: partnerVercelLogo,
+            },
+            {
+              icon: partnerGithubLogo,
+            },
+            {
+              icon: partnerAwsLogo,
+            },
           ]}
+          containerClass={"partner-container"}
           itemClass={"partner-item"}
         />
       </Page>
       <Page>
         <DetailsIconSection
           uid="TECHNOLOGY-SECTION"
-          heading={"Technologies"}
+          // heading={"Technologies"}
           paragraph={
-            "We work with cutting-edge technologies designed to solve your product requirements. Focus on finding solutions for your business needs while we handle the technical aspect."
+            "We work with cutting-edge technologies Designed to solve your product requirements. "
           }
           items={[
             {
