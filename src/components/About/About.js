@@ -11,7 +11,26 @@ export default function About({ uid }) {
         <h3 className="about-heading small-capital-heading">WHAT WE DO BEST</h3>
         <p className="about-paragraph paragraph">{about}</p>
 
-        <Stats />
+        <Stats data={[
+            {
+              title:"5 +",
+              description:"Years of development experiance"
+            },
+            {
+              title:"500 +",
+              description:"Project delivered"
+            },
+            {
+              title:"500 +",
+              description:"Happy clients"
+            },
+            {
+              title:"80 +",
+              description:"Professional employees"
+            }
+        
+          ]}
+          />
         {/* TODO ADD Web deve and other services cards */}
         <div className="spacer" />
         <h3 className="about-heading small-capital-heading">TRUSTED CLIENTS</h3>

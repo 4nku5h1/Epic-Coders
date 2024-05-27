@@ -24,11 +24,50 @@ import partnerVercelLogo from "../../assets/partners/vercel.png";
 import partnerGithubLogo from "../../assets/partners/github.png";
 import partnerAwsLogo from "../../assets/partners/aws.png";
 
+import reactLogo from "../../assets/servicesEpicCoders/react.png";
+import mobileDevLogo from "../../assets/servicesEpicCoders/app.png";
+import uxLogo from "../../assets/servicesEpicCoders/ux.png";
+import fullstackLogo from "../../assets/servicesEpicCoders/fullstack.png";
+import businessLogo from "../../assets/servicesEpicCoders/business.png";
+
+import Stats from "./Stats/Stats";
+
 export default function Home() {
   return (
     <>
       <Page>
         <Banner uid="HOME_BANNER" />
+      </Page>
+      <Page>
+           <Stats data={[
+            {
+              title:"",
+              logo:reactLogo,
+              description:"Web App Development"
+            },
+            {
+              title:"",
+              logo:mobileDevLogo,
+              description:"Mobile App Development"
+            },
+            {
+              title:"",
+              logo:uxLogo,
+              description:"UI/UX Design"
+            },
+            {
+              title:"",
+              logo:fullstackLogo,
+              description:"Full Stack Development"
+            },
+            {
+              title:"",
+              logo:businessLogo,
+              description:"Business Analysis"
+            }
+        
+          ]}
+          />
       </Page>
 
       <Page>
