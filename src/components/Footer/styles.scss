@@ -13,12 +13,6 @@
         height: 100vh;
         justify-content: space-evenly;
 
-        .logo {
-            color: #fff;
-            margin: 0;
-            align-self: start;
-        }
-
         .talk-to-us {
             display: flex;
             flex-direction: column;
@@ -129,10 +123,6 @@
 @media only screen and (max-width:480px) {
     .footer {
         .container {
-            .logo {
-                align-self: start;
-            }
-
             .talk-to-us {
 
                 h1 {

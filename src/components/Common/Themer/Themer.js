@@ -63,6 +63,14 @@ export default function Themer({ changePageStateFunction }) {
         currentConfig[id].buttonColor
       );
       document.documentElement.style.setProperty(
+        "--themer-button-text-solid",
+        currentConfig[id].buttonTextSolid
+      );
+      document.documentElement.style.setProperty(
+        "--themer-button-text-outlined",
+        currentConfig[id].buttonTextOutlined
+      );      
+      document.documentElement.style.setProperty(
         "--themer-accent",
         currentConfig[id].accentColor
       );

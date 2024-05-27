@@ -1,7 +1,6 @@
 import { contactData, socialdata } from "./data.js";
 
 import './styles.scss';
-import Logo from "../Logo/Logo";
 import Galaxy from "../Common/Galaxy/Galaxy.js";
 
 export default function Footer() {
@@ -10,7 +9,6 @@ export default function Footer() {
 
       <Galaxy position="CURRENT"/>
             <div className="container">
-                <Logo size={10} />
                 <div className="talk-to-us">
                     <h1><span>Got a brand on your hands?</span> Let’s talk about it.</h1>
                     <a href="https://wa.me/+919457776161">

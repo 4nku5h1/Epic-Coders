@@ -21,9 +21,7 @@ export default function NavDesktop({ actions = [] }) {
     }
     return (
         <div className='navbar' id='navbar'>
-            <div className='nav-logo'>
-            <Logo size={10} showSubtitle={false}></Logo>
-            </div>
+              <Logo size={24} showSubtitle={false}></Logo>
             <div className='nav-items'>
                 {actions.map((act) => <NavAction {...act} />)}
             </div>

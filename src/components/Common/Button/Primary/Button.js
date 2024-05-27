@@ -1,5 +1,6 @@
-export default function Button({ className, label, onClick }) {
+import './styles.scss'
+export default function Button({ className, label, onClick, type, roundedCorners }) {
     return (
-        <button className={`button ${className}`} onClick={onClick}>{label}</button>
+        <button className={`button ${className} ${type==='SOLID'? 'solid':'outlined'} ${roundedCorners?'round':''}`} onClick={onClick}>{label}</button>
     )
 }

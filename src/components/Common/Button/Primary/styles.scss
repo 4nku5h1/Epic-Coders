@@ -2,15 +2,29 @@
     padding: 12px 24px;
     font-size: 11px !important;
     font-weight: 600 !important;
-    border: 1px solid var(--themer-button-border);
-    color: var(--themer-button);
     text-transform: uppercase;
     background-color: transparent;
     letter-spacing: 3px;
     transition: all 0.7s;
+    text-transform: capitalize !important;
+}
+.button.round{
+    border-radius: 8px;
+}
+.button.solid{
+    background-color: var(--themer-button);
+    color: var(--themer-button-text-solid);
+    border: none;
+}
+.button.outlined{
+    border: 1px solid var(--themer-button-text-solid);
+    color: var(--themer-button-text-outlined);
 }
 
-.button:hover {
+.button.solid:hover {
+}
+
+.button.outlined:hover {
     border: 1px solid var(--themer-accent);
 }
 

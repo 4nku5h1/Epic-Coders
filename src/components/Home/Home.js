@@ -27,7 +27,7 @@ import partnerAwsLogo from "../../assets/partners/aws.png";
 export default function Home() {
   return (
     <>
-      <Page fullViewHeight>
+      <Page>
         <Banner uid="HOME_BANNER" />
       </Page>
 
@@ -54,15 +54,6 @@ export default function Home() {
           uid="PARTNERS-SECTION"
           heading={"Certified Partners"}
           items={[
-            {
-              icon: partnerVercelLogo,
-            },
-            {
-              icon: partnerGithubLogo,
-            },
-            {
-              icon: partnerAwsLogo,
-            },
             {
               icon: partnerVercelLogo,
             },
@@ -138,7 +129,7 @@ export default function Home() {
           path: "software-development-services",
         }}
       /> */}
-      <ImageGridBanner uid="GALLERY" />
+      {/* <ImageGridBanner uid="GALLERY" /> */}
       <About uid="ABOUT" />
     </>
   );

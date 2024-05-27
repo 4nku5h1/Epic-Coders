@@ -1,23 +1,16 @@
-.logo {
+.logo{
     font-size: 24px;
-    * {
-        color: inherit;
-    }
-
     padding-left: 0;
     padding-right: 0;
-    width: min-content;
+    color: var(--themer-heading);
 
     h2 {
-        font-size:2em;
+        font-size: inherit;
         font-weight: 900;
-        letter-spacing: 5px;
         margin-bottom: 0;
-    }
-
-    span {
-        letter-spacing: normal;
-        font-weight: 100;
+        span {
+            letter-spacing: normal;
+        }
     }
 
     h3 {
@@ -25,11 +18,4 @@
         font-size: 0.5em;
         font-weight: 200;
     }
-}
-
-.logo {
-
-
-
-    
 }

@@ -1,35 +1,16 @@
 $font-size: 18px;
 
 .navbar {
-    // background-color: var(--themer-background);
-
-    * {
-        font-size: $font-size;
-    }
-    position: absolute;
-    top: 0;
+    background-color: var(--themer-background);
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.15);
+    position: sticky;
+    top: 0px;
     width: 100%;
-    padding:75px 12vw;
+    padding:32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-
-    .nav-logo {
-        color: var(--themer-heading);
-        flex: 1;
-
-        h2 {
-            font-weight: 800;
-            letter-spacing: 1px;
-
-            span {
-                color: rgb(134, 124, 124);
-                font-weight: 100;
-
-            }
-        }
-    }
 
     .nav-items {
         color: var(--themer-content);
