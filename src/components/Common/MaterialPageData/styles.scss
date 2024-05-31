@@ -55,12 +55,6 @@
             text-transform: uppercase;
         }
     }
-
-    .service-card:hover {
-        p {
-            color: var(--themer-accent);
-        }
-    }
 }
 
 @media only screen and (max-width:480px) {

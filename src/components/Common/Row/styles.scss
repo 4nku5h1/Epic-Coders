@@ -1,0 +1,11 @@
+.my-row {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .my-row {
+    width: 100%;
+  }
+
+}

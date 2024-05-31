@@ -1,46 +1,44 @@
-import roseImage from "../../assets/background/rose.webp";
-import AnimatedItems from "../Common/Motion/AnimatedItems";
-import Stats from "../Home/Stats/Stats";
-import { about, clientDescription, clientNames } from "../data";
+import AnimatedItems from '../Common/Motion/AnimatedItems';
+import Stats from '../Common/Row/Row';
+import { about, clientDescription, clientNames } from '../data';
 
-import "./styles.scss";
+import './styles.scss';
 export default function About({ uid }) {
-  return (
-    <div className="themer page content">
-      <div className="container" id={uid}>
-        <h3 className="about-heading small-capital-heading">WHAT WE DO BEST</h3>
-        <p className="about-paragraph paragraph">{about}</p>
+    return (
+        <div className="themer page content">
+            <div className="container" id={uid}>
+                <h2>What we do best</h2>
+                <p className="about-paragraph paragraph">{about}</p>
 
-        <Stats data={[
-            {
-              title:"5 +",
-              description:"Years of development experiance"
-            },
-            {
-              title:"500 +",
-              description:"Project delivered"
-            },
-            {
-              title:"500 +",
-              description:"Happy clients"
-            },
-            {
-              title:"80 +",
-              description:"Professional employees"
-            }
-        
-          ]}
-          />
-        {/* TODO ADD Web deve and other services cards */}
-        <div className="spacer" />
-        <h3 className="about-heading small-capital-heading">TRUSTED CLIENTS</h3>
-        <p className="about-paragraph paragraph">{clientDescription}</p>
-        <AnimatedItems
-          animate={true}
-          data={clientNames}
-          child={(item) => <span>{item}</span>}
-        />
-      </div>
-    </div>
-  );
+                <Stats
+                    data={[
+                        {
+                            title: '5 +',
+                            description: 'Years of development experiance',
+                        },
+                        {
+                            title: '500 +',
+                            description: 'Project delivered',
+                        },
+                        {
+                            title: '500 +',
+                            description: 'Happy clients',
+                        },
+                        {
+                            title: '80 +',
+                            description: 'Professional employees',
+                        },
+                    ]}
+                />
+                <div className="spacer" />
+                <h2>Trusted Clients</h2>
+                <p className="about-paragraph paragraph">{clientDescription}</p>
+                <AnimatedItems
+                    animate={true}
+                    data={clientNames}
+                    child={item => <span>{item}</span>}
+                />
+            </div>
+        </div>
+    );
 }
