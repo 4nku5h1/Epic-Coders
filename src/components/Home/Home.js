@@ -32,6 +32,7 @@ import architectureLogo from '../../assets/experiance/architecture.png';
 import Row from '../Common/Row/Row';
 import './styles.scss';
 import { Heading1, Heading2, Heading3, Heading4 } from '../Common/Heading/Heading';
+import About from '../About/About';
 
 export default function Home() {
     return (
@@ -76,11 +77,14 @@ export default function Home() {
                 />
             </Page>
 
-            <Page>
-                <Heading3 heading={'We Deliver Extraordinary Digital Experiences'} />
+            <Page className="service-page">
+                <Heading3
+                    className="heading-3"
+                    heading={'We Deliver Extraordinary Digital Experiences'}
+                />
                 <Row
                     name="services-row"
-                    containerClass={'service-how-container'}
+                    containerClass={'service-container-row row1'}
                     data={[
                         {
                             icon: aiLogo,
@@ -90,6 +94,19 @@ export default function Home() {
                             icon: designLogo,
                             title: 'Design experience that leaves an impact',
                         },
+                    ]}
+                    itemClass={'service-how-item'}
+                    child={item => (
+                        <>
+                            <img className="logos" src={item.icon} />
+                            <p>{item.title}</p>
+                        </>
+                    )}
+                />
+                <Row
+                    name="services-row"
+                    containerClass={'service-container-row row2'}
+                    data={[
                         {
                             icon: qualityLogo,
                             title: 'Standarized approach for speed & quality',
@@ -102,18 +119,6 @@ export default function Home() {
                             icon: secureLogo,
                             title: 'Secure Solutions',
                         },
-                        {
-                            icon: userLogo,
-                            title: 'User-Centric Design',
-                        },
-                        {
-                            icon: architectureLogo,
-                            title: 'Using Agile Methodologies',
-                        },
-                        {
-                            icon: architectureLogo,
-                            title: 'Using Agile Methodologies',
-                        },
                     ]}
                     child={item => {
                         return (
@@ -123,6 +128,27 @@ export default function Home() {
                             </div>
                         );
                     }}
+                />
+                <Row
+                    name="services-row"
+                    containerClass={'service-container-row row3'}
+                    data={[
+                        {
+                            icon: userLogo,
+                            title: 'User-Centric Design',
+                        },
+                        {
+                            icon: architectureLogo,
+                            title: 'Using Agile Methodologies',
+                        },
+                    ]}
+                    itemClass={'service-how-item'}
+                    child={item => (
+                        <>
+                            <img className="logos" src={item.icon} />
+                            <p>{item.title}</p>
+                        </>
+                    )}
                 />
             </Page>
             <Page>
@@ -210,7 +236,7 @@ export default function Home() {
                     }}
                 />
             </Page>
-            {/* <About uid="ABOUT" /> */}
+            <About uid="ABOUT" />
         </>
     );
 }

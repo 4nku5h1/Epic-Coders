@@ -2,17 +2,17 @@ const colorConfig = {
     headingLight: '#E3E3E3',
     headingDark: '#3c4043',
     contentDark: '#3c4043',
-    contentLight:'#999999',
+    contentLight: '#999999',
     borderDark: '#525252',
     borderLight: '#e4d6d6',
     buttonColor: '#1966d2',
     buttonTextSolid: '#fff',
-    buttonTextOutlined:'#000',
+    buttonTextOutlined: '#000',
     accentColor: '#00948C',
     gray: '#101010',
     white: '#fff',
-    black: '#000'
-}
+    black: '#000',
+};
 const theme = {
     themeLight: {
         backgroundColor: colorConfig.white,
@@ -21,7 +21,7 @@ const theme = {
         contentColor: colorConfig.contentDark,
         buttonColor: colorConfig.buttonColor,
         buttonTextSolid: colorConfig.buttonTextSolid,
-        buttonTextOutlined:colorConfig.buttonTextOutlined,
+        buttonTextOutlined: colorConfig.buttonTextOutlined,
         borderColor: colorConfig.borderLight,
         accentColor: colorConfig.accentColor,
     },
@@ -32,9 +32,9 @@ const theme = {
         contentColor: colorConfig.contentDark,
         buttonColor: colorConfig.buttonColor,
         buttonTextSolid: colorConfig.buttonTextSolid,
-        buttonTextOutlined:colorConfig.buttonTextOutlined,
+        buttonTextOutlined: colorConfig.buttonTextOutlined,
         borderColor: colorConfig.borderDark,
-        accentColor: colorConfig.accentColor
+        accentColor: colorConfig.accentColor,
     },
     themeDark: {
         backgroundColor: colorConfig.black,
@@ -43,10 +43,9 @@ const theme = {
         contentColor: colorConfig.contentLight,
         buttonColor: colorConfig.buttonColor,
         buttonTextSolid: colorConfig.buttonTextSolid,
-        buttonTextOutlined:colorConfig.buttonTextOutlined,
+        buttonTextOutlined: colorConfig.buttonTextOutlined,
         borderColor: colorConfig.borderDark,
-        accentColor: colorConfig.accentColor
-    }
-
-}
+        accentColor: colorConfig.accentColor,
+    },
+};
 export default theme;

@@ -9,6 +9,7 @@
   --element-margin: 8px;
   --container-width: 65vw;
   --container-width-mobile: 83vw;
+  --background-color-main: #e3eefc;
 }
 
 .page {
@@ -29,8 +30,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 32px 0 32px !important;
-  margin: -2px;
+  padding: 0 32px 0 32px;
+  margin: 0;
   transition: background-color 0.8s ease;
   background-color: var(--themer-background);
   overflow-x: hidden;

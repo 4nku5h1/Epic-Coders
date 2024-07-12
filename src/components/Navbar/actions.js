@@ -1,10 +1,5 @@
 const navigationActions = [
     {
-        id: 'root',
-        name: 'Home',
-        path: '/',
-    },
-    {
         id: 'SERVICE-IMAGE-EDITING',
         name: 'Services',
         path: '/',
@@ -22,6 +17,6 @@ const navigationActions = [
     {
         id: 'FOOTER',
         name: 'Contact',
-    }
-]
+    },
+];
 export default navigationActions;

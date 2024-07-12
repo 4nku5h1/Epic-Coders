@@ -34,7 +34,7 @@
 }
 
 .partner-container {
-  margin-bottom: 150px;
+  margin: calc(var(--section-margin) / 2) 0;
   justify-content: center;
   gap: 100px;
 
@@ -56,46 +56,72 @@
   }
 }
 
+.service-page {
+  padding: calc(var(--section-margin) * 2) 0 !important;
 
-.service-how-container {
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
+  .heading-3 {
+    margin-bottom: var(--section-margin);
+  }
 
-  .service-how-item {
-    display: flex;
-    flex-direction: column;
+  .row1,
+  .row3 {
+    .service-how-item {
+      min-height: 450px !important;
+      width: 50% !important;
+      gap: 24px;
+    }
+  }
+
+  .service-container-row {
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    // padding: 32px 24px;
-    border-radius: 24px;
-    background-color: #e3eefc;
-    flex: 1;
-    min-height: 450px;
-    width: 350px;
+    gap: 24px;
+    margin-bottom: 24px;
+    max-width: 1098px;
 
-    img {
-      height: 60px !important;
-      width: 60px !important;
-      margin-bottom: 24px;
+
+
+    .service-how-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--themer-content);
+      border-radius: 24px;
+      background-color: var(--background-color-main);
+
+      flex: 1;
+      min-height: 450px;
+      width: 350px;
+
+      img {
+        height: 60px !important;
+        width: 60px !important;
+        margin-bottom: 24px;
+      }
+
+      p {
+        text-align: center;
+        height: max-content;
+        letter-spacing: 0 !important;
+        line-height: 1.5;
+        font-size: 28px !important;
+        font-weight: 700;
+        padding: 0 24px;
+      }
+
+
     }
-
-    p {
-      text-align: center;
-      height: max-content;
-      letter-spacing: 0 !important;
-      line-height: 1.5;
-      font-size: 28px !important;
-      font-weight: 700;
-    }
-
-
   }
 }
 
+
 .technologies-page {
-  background-color: #f4f1eb !important;
+  padding: calc(var(--section-margin) * 2) 0 !important;
+  background-color: var(--background-color-main) !important;
+
+  color: var(--themer-content) !important;
 
   p {
     width: 100%;
@@ -111,6 +137,7 @@
     align-items: center;
     max-width: 60%;
     gap: 50px;
+    margin: var(--section-margin) 0 !important;
 
     .technologies-item {
       width: 120px;
