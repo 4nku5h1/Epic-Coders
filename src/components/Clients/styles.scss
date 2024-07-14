@@ -1,0 +1,39 @@
+.clients-page {
+    padding: 80px !important;
+
+    .about-paragraph {
+        font-size: 16px !important;
+        color: var(--themer-content);
+        margin-bottom: 36px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 24px;
+        max-width: 40%;
+    }
+
+    .clientsName-container {
+        width: 70%;
+        margin-top: 24px;
+        display: flex;
+        gap: 24px !important;
+
+        .clientName {
+            text-transform: uppercase !important;
+            width: 30%;
+            font-size: 12px;
+            font-weight: 500;
+            user-select: none;
+        }
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    .clients-page {
+        .about-paragraph {
+            max-width: 100%;
+            text-align: left;
+            font-size: 18px !important;
+        }
+    }
+}

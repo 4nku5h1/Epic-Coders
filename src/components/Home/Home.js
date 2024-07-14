@@ -31,16 +31,17 @@ import architectureLogo from '../../assets/experiance/architecture.png';
 
 import Row from '../Common/Row/Row';
 import './styles.scss';
-import { Heading1, Heading2, Heading3, Heading4 } from '../Common/Heading/Heading';
+import { Heading1, Heading3 } from '../Common/Heading/Heading';
 import About from '../About/About';
+import Clients from '../Clients/Clients';
 
 export default function Home() {
     return (
         <>
-            <Page>
+            <Page uid="HOME">
                 <Banner uid="HOME_BANNER" />
             </Page>
-            <Page>
+            <Page uid="HOME">
                 <Row
                     name="services-row"
                     containerClass={'services-row-container'}
@@ -77,7 +78,7 @@ export default function Home() {
                 />
             </Page>
 
-            <Page className="service-page">
+            <Page className="service-page" uid="HOME">
                 <Heading3
                     className="heading-3"
                     heading={'We Deliver Extraordinary Digital Experiences'}
@@ -151,34 +152,7 @@ export default function Home() {
                     )}
                 />
             </Page>
-            <Page>
-                <Heading3 heading={'Certified Partners'} />
-                <Row
-                    name="services-row"
-                    containerClass={'partner-container'}
-                    itemClass={'partner-item'}
-                    data={[
-                        {
-                            icon: partnerVercelLogo,
-                        },
-                        {
-                            icon: partnerGithubLogo,
-                        },
-                        {
-                            icon: partnerAwsLogo,
-                        },
-                    ]}
-                    child={item => {
-                        return (
-                            <>
-                                <img className="item-logo" src={item.icon} />
-                                <p>{item.title}</p>
-                            </>
-                        );
-                    }}
-                />
-            </Page>
-            <Page className="technologies-page">
+            <Page className="technologies-page" uid="HOME">
                 <Heading1 heading={'Technologies we use'} />
                 <p>
                     We work with cutting-edge technologies Designed to solve your product
@@ -236,7 +210,37 @@ export default function Home() {
                     }}
                 />
             </Page>
-            <About uid="ABOUT" />
+            <Page uid="HOME" className="partners-page">
+                <Heading3 heading={'Certified Partners'} />
+                <Row
+                    name="services-row"
+                    containerClass={'partner-container'}
+                    itemClass={'partner-item'}
+                    data={[
+                        {
+                            icon: partnerVercelLogo,
+                        },
+                        {
+                            icon: partnerGithubLogo,
+                        },
+                        {
+                            icon: partnerAwsLogo,
+                        },
+                    ]}
+                    child={item => {
+                        return (
+                            <>
+                                <img className="item-logo" src={item.icon} />
+                                <p>{item.title}</p>
+                            </>
+                        );
+                    }}
+                />
+            </Page>
+
+            <About uid="HOME" />
+
+            <Clients uid="HOME" />
         </>
     );
 }

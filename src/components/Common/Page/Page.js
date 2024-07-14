@@ -10,16 +10,19 @@ const verticalRules = {
 };
 
 export default function Page({
+    uid = '',
     className = '',
     children,
     fullViewHeight,
     contentVerticalAlign = 'center', // center, flex-start=top, flex-end=bottom
     contentHorizontalAlign = 'center', // center, flex-start= left, flex-end= right,
     backgroundColor = '',
+    useThemer = true,
 }) {
     return (
         <div
-            className={`page2 ${className}`}
+            id={uid}
+            className={`page2 ${useThemer ? 'themer' : ''} ${className}`}
             style={{
                 minHeight: fullViewHeight ? '100vh' : '',
                 justifyContent: verticalRules[contentVerticalAlign],
