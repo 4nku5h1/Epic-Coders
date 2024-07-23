@@ -4,7 +4,6 @@ html {
   font-size: 16px;
   cursor: pointer;
   overflow-x: hidden;
-  background-color: black !important;
 }
 body{
   background-color: transparent !important;

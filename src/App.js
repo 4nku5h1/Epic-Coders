@@ -12,24 +12,24 @@ import ScrollToTop from './components/Common/ScrollToTop/ScrollToTop.js';
 import LoadingBar from './components/Common/LoadingBar/LoadingBar.js';
 
 function App() {
-  const appContext = useAppContext();
-  function changePageConfig(pageConfig) {
-    appContext.setPageConfig(pageConfig);
-  }
+    const appContext = useAppContext();
+    function changePageConfig(pageConfig) {
+        appContext.setPageConfig(pageConfig);
+    }
 
-  return (
-    <div className="App">
-      <CustomCursor />
-      <HashRouter>
-      <Themer changePageStateFunction={changePageConfig} />
-        {/* <LoadingBar /> */}
-        <ScrollToTop />
-        <NavBar />
-        <MainComponent />
-        <Footer />
-      </HashRouter>
-    </div>
-  );
+    return (
+        <div className="App">
+            <CustomCursor />
+            <HashRouter>
+                <Themer changePageStateFunction={changePageConfig} />
+                {/* <LoadingBar /> */}
+                <ScrollToTop />
+                {/* <NavBar /> */}
+                <MainComponent />
+                {/* <Footer /> */}
+            </HashRouter>
+        </div>
+    );
 }
 
 export default App;
