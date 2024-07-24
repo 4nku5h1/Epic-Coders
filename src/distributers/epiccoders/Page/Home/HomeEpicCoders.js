@@ -2,11 +2,6 @@ import Button from '../../../../components/Common/Button/Primary/Button';
 import Container from '../../../../components/Common/Container/Container';
 import Row from '../../../../components/Common/Row/Row';
 
-import partnerVercelLogo from '../../../../assets/partners/vercel.png';
-import partnerGithubLogo from '../../../../assets/partners/github.png';
-import partnerAwsLogo from '../../../../assets/partners/aws.png';
-import './home.scss';
-
 import service1 from '../../../../assets/epiccoders/services/1.png';
 import service2 from '../../../../assets/epiccoders/services/2.png';
 import service3 from '../../../../assets/epiccoders/services/3.png';
@@ -22,6 +17,11 @@ import postgressLogo from '../../../../assets/technologies/postgress.png';
 import devopsLogo from '../../../../assets/technologies/devops.webp';
 import springLogo from '../../../../assets/technologies/spring.svg';
 import ContainerSlider from '../../../../components/Common/ContainerSlider/ContainerSlider';
+
+import Navbar from '../../components/Navbar/Navbar';
+import './home.scss';
+import Logo from '../../../../components/Logo/Logo';
+
 export default function HomeEpicCoders() {
     function ContactButton({ theme }) {
         return (
@@ -35,27 +35,42 @@ export default function HomeEpicCoders() {
             />
         );
     }
-    function Rating() {
-        return <div className="rating">Rated 5/5 on Many.</div>;
+    function Rating({ theme }) {
+        return (
+            <div className="rating-container">
+                <div className={`rating ${theme === 'LIGHT' ? 'light' : 'dark'}`}>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>{' '}
+                    <p className="opacity-white-text">
+                        Rated 5/5 on <u>Many.</u>
+                    </p>
+                </div>
+            </div>
+        );
     }
     return (
         <>
+            <Navbar />
             <Container className={'container-1 background'}>
                 <div className="section1 flex-column-center">
-                    <h1>A Design and development studio</h1>
+                    <h1>Design and engineering studio.</h1>
                     <p className="opacity-white-text">
                         We create stunning, custom Webflow websites that combine beautiful design
                         with seamless functionality.
                     </p>
                     <ContactButton theme={'LIGHT'} />
-                    <Rating />
+                    <Rating theme={'LIGHT'} />
                 </div>
             </Container>
             <Container className="container-2">
-                <h2>Webflow agency services</h2>
+                <h2>Our services</h2>
                 <p className="opacity-dark-text">
-                    Explore our services, from web design to Webflow development, for an exceptional
-                    online presence.
+                    We offer a range of services, including web and mobile app development, UI/UX
+                    design, and full stack development, to create an exceptional online presence
+                    tailored to your digital needs.
                 </p>
             </Container>
 
@@ -73,7 +88,7 @@ export default function HomeEpicCoders() {
                         {
                             heading: 'Mobile App Development',
                             paragraph:
-                                'Building custom, high-performance apps to meet your business needs.',
+                                'We develops custom mobile apps using Android and Flutter, providing smooth and engaging user experiences.',
                             backgroundImage: service2,
                         },
                         {
@@ -85,7 +100,7 @@ export default function HomeEpicCoders() {
                         {
                             heading: 'Full Stack Development',
                             paragraph:
-                                'Building custom, high-performance websites with Webflow to meet your business needs.',
+                                'We provide comprehensive full stack development services, building robust and scalable solutions from front-end to back-end.',
                             backgroundImage: service4,
                         },
                     ]}
@@ -109,25 +124,21 @@ export default function HomeEpicCoders() {
                 </p>
                 <Row
                     // Todo add logo
-                    containerClass={'row'}
+                    containerClass={'row-clients'}
                     itemClass={'card'}
                     data={[
                         'PROMAN',
-                        'Geek For Geeks',
                         'BIMRA 4x4',
                         'Newton School',
                         'Zenpact',
                         'FOX MORTGAGE',
                         'E-Cart',
                         'CITI BANK',
-                        'AIG INSURANCE',
-                        'GREEN STREET',
                         'WOW',
                         'RENTOMOJO',
                         'HEALTHIFY',
                         '24 SEVEN',
                         'T&T',
-                        'Apple',
                     ]}
                     child={item => {
                         return <p>{item}</p>;
@@ -142,26 +153,25 @@ export default function HomeEpicCoders() {
                 <div className="right">
                     <ContainerSlider>
                         <div className="card-testimonial">
-                            <h4>Logo</h4>
+                            <h4>T&T</h4>
                             <p className="testimonial-para">
-                                "Juno has been a trustworthy part of the team for a few years now. I
-                                will always rehire them for future work when needed and I highly
-                                recommend that you work with them if you’re looking for a studio
-                                that cares about the craft."
+                                "Epic Coder enhanced our online presence with a stunning website
+                                that’s both beautiful and functional. Their professionalism and
+                                attention to detail were top-notch, resulting in a significant boost
+                                in user engagement. Highly recommend!"
                             </p>
-                            <h5>Dexter Washington</h5>
-                            <p className="opacity-white-text">Crafted Studios</p>
+                            <h5>Tina Lee</h5>
+                            <p className="opacity-white-text">CEO, T&T</p>
                         </div>
                         <div className="card-testimonial">
-                            <h4>Logo</h4>
+                            <h4>24 SEVEN</h4>
                             <p className="testimonial-para">
-                                "Juno has been a trustworthy part of the team for a few years now. I
-                                will always rehire them for future work when needed and I highly
-                                recommend that you work with them if you’re looking for a studio
-                                that cares about the craft."
+                                "Epic Coder delivered a fantastic mobile app using Flutter. Their
+                                expertise and dedication were clear throughout, and the high-quality
+                                app has been a hit with our users. We’re thrilled with the results!"
                             </p>
-                            <h5>Dexter Washington</h5>
-                            <p className="opacity-white-text">Crafted Studios</p>
+                            <h5>Kunal G</h5>
+                            <p className="opacity-white-text">CEO, 24 SEVEN</p>
                         </div>
                     </ContainerSlider>
                 </div>
@@ -218,7 +228,7 @@ export default function HomeEpicCoders() {
                         return (
                             <>
                                 <img className="item-logo" src={item.icon} />
-                                <p>{item.title}</p>
+                                <p className="opacity-dark-text">{item.title}</p>
                             </>
                         );
                     }}
@@ -235,30 +245,32 @@ export default function HomeEpicCoders() {
                                 icon: 'userLogo',
                                 heading: 'User-Centric Design',
                                 description:
-                                    'Webflow offers unparalleled design freedom, allowing you to create unique, visually stunning websites without limitations. ',
+                                    'At Epic Coders, we prioritize your users with our user-centric design approach. We create intuitive, visually appealing interfaces that not only captivate but also enhance usability, ensuring a seamless and engaging experience for every visitor.',
                             },
                             {
                                 icon: 'architectureLogo',
                                 heading: 'Using Agile Methodologies',
                                 description:
-                                    'Webflow offers unparalleled design freedom, allowing you to create unique, visually stunning websites without limitations. ',
+                                    'Choose Epic Coder for our Agile approach, which ensures flexibility and adaptability throughout your project. Our iterative process allows for continuous improvement and quick adjustments to meet your evolving needs',
                             },
                             {
                                 icon: 'userLogo',
-                                heading: 'User-Centric Design',
+                                heading: 'SEO-Friendly',
                                 description:
-                                    'Webflow offers unparalleled design freedom, allowing you to create unique, visually stunning websites without limitations. ',
+                                    'Achieve optimal search engine visibility with our SEO-friendly approach. We incorporate best practices and advanced techniques to enhance your websites ranking, ensuring it reaches the right audience and drives meaningful traffic.',
                             },
                             {
                                 icon: 'architectureLogo',
-                                heading: 'Using Agile Methodologies',
+                                heading: 'Secure Solutions',
                                 description:
-                                    'Webflow offers unparalleled design freedom, allowing you to create unique, visually stunning websites without limitations. ',
+                                    'Security is a top priority. We implement robust measures and adhere to best practices to protect your data, ensuring that your digital solutions are safeguarded against potential threats.',
                             },
                         ]}
                         child={item => (
                             <>
-                                <img className="logos" src={item.icon} />
+                                <div className="image">
+                                    <img src={item.icon} />
+                                </div>
                                 <h3>{item.heading}</h3>
                                 <p className="opacity-white-text card-paragraph">
                                     {item.description}
@@ -275,18 +287,39 @@ export default function HomeEpicCoders() {
                 </div>
             </Container>
             <Container className="container-8" contentHorizontalAlign="left">
-                <h2>Ready to scale your </h2>
-                <h2>project to the next level?</h2>
+                <h2>Ready to scale your project to the next level?</h2>
                 <p className="opacity-dark-text">
                     Let's take your project to new heights, reach out and see how we can help you.
                 </p>
 
                 <ContactButton theme={'DARK'} />
-                <Rating />
+                <Rating theme={'DARK'} />
+            </Container>
+            <Container className="container-9" contentHorizontalAlign="left">
                 <div className={'footer background'}>
-                    {/* Todo Footer */}
-                    <div>
-                        <h4>Epic coders</h4>
+                    <div className="footer-row1">
+                        <Logo showSubtitle={false} />
+                        <div className="link-items">
+                            <div className="item"></div>
+
+                            <div className="item"></div>
+                        </div>
+                    </div>
+                    <div className="footer-row2">
+                        <div className="left">
+                            <p>
+                                <a href="tel:+919457776161">(+91) 9457776161</a>
+                            </p>
+                            <p>
+                                <a href="mailto:pixobrew@gmail.com?subject=Request for Editing Services&body=Hi,">
+                                    epiccoders@gmail.com
+                                </a>
+                            </p>
+                            <p>South Extension 42 New Delhi, India</p>
+                        </div>
+                        <div className="right">
+                            <p>All rights reserved Epic Coders Studio</p>
+                        </div>
                     </div>
                 </div>
             </Container>

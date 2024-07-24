@@ -28,14 +28,50 @@ $card-border: 8px;
     min-width: 180px;
 }
 
+.rating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 0;
+
+    .rating {
+        display: flex;
+        gap: 4px;
+        font-size: 12px;
+    }
+
+    .rating.light {
+        color: var(--yellow);
+    }
+
+    .rating.dark {
+        color: var(--dark);
+
+        p {
+            color: var(--dark) !important;
+        }
+    }
+
+    p {
+        font-size: 12px;
+        margin-top: 0 !important;
+    }
+}
+
 .container-1 {
-    height: 670px;
+    height: 750px;
+
+    h1 {
+        line-height: 1.1;
+    }
 
     .btn-contact-us {
         margin-top: 24px;
     }
 
-    .rating {
+
+    .rating-container {
         margin-top: 56px;
     }
 
@@ -56,6 +92,8 @@ $card-border: 8px;
 }
 
 .container-3 {
+
+
     .row {
         justify-content: center;
         gap: 12px;
@@ -69,11 +107,20 @@ $card-border: 8px;
             height: 480px;
             padding: 32px;
 
+            h3 {
+                text-align: left;
+            }
+
             img {
                 margin-top: 24px;
                 align-self: flex-end;
                 height: 277px;
                 width: 277px;
+            }
+
+            p {
+                text-align: left;
+                max-width: 70%;
             }
         }
     }
@@ -87,7 +134,7 @@ $card-border: 8px;
         margin-top: 8px;
     }
 
-    .row {
+    .row-clients {
         margin-top: 48px;
         justify-content: center;
         gap: 12px;
@@ -136,7 +183,7 @@ $card-border: 8px;
         .card-testimonial {
             flex-direction: column;
             display: flex;
-            gap: 24px;
+            gap: 18px;
 
             h5 {
                 font-size: 14px;
@@ -152,7 +199,7 @@ $card-border: 8px;
             }
 
             .opacity-white-text {
-                margin-top: -28px;
+                margin-top: -22px;
                 font-size: 12px;
             }
         }
@@ -228,10 +275,21 @@ $card-border: 8px;
                 width: 300px;
                 height: 250px;
 
-                img {
-                    width: 40px;
-                    height: 40px;
+                .image {
+                    padding: 2.5px;
+                    width: fit-content;
+                    border: 1px solid var(--white-stroke);
+                    border-radius: $card-border;
+
+                    img {
+                        background-color: var(--white);
+                        border-radius: $card-border;
+                        width: 40px;
+                        height: 40px;
+                    }
                 }
+
+
 
                 h3 {
                     margin-top: 24px;
@@ -269,6 +327,13 @@ $card-border: 8px;
 }
 
 .container-8 {
+    text-align: left;
+
+    h2 {
+        max-width: 60%;
+        align-self: flex-start;
+    }
+
     p {
         margin-top: 12px;
     }
@@ -277,14 +342,229 @@ $card-border: 8px;
         margin-top: 24px;
     }
 
-    .rating {
+    .rating-container {
         margin-top: 48px;
     }
+}
 
+.container-9 {
     .footer {
         margin-bottom: 48px;
         border-radius: $card-border;
         width: 100%;
         height: 200px;
+        padding: 24px;
+        padding-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .footer-row1,
+        .footer-row2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                font-size: 12px;
+
+                a {
+                    color: var(--yellow);
+                    text-decoration: none !important;
+                }
+            }
+        }
+
+        .footer-row1 .link-items {
+            display: flex;
+            gap: 8px;
+
+            .item {
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                background-color: var(--white);
+            }
+        }
+
+        .footer-row2 {
+            padding-top: 16px;
+            border-top: 1px solid var(--white-stroke);
+
+            .left {
+                display: flex;
+                gap: 18px;
+            }
+
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:480px) {
+    .container-1 {
+        height: 600px;
+
+        .btn-contact-us {
+            margin-top: 24px;
+        }
+
+
+        .rating-container {
+            // margin-top: 56px;
+        }
+
+        .section1 {
+            p {
+                max-width: 100%;
+                margin-top: 4px;
+            }
+        }
+    }
+
+    .container-2 {
+        p {
+            max-width: 100%;
+        }
+    }
+
+    .container-3 {}
+
+    .container-4 {
+        p {
+            text-align: left;
+            max-width: 400px;
+            margin-top: 8px;
+        }
+
+        .row-clients {
+            gap: 4px;
+
+            .card {
+                width: calc((100% /2) - 4px);
+                height: 108px;
+                padding: 12px;
+
+                p {
+                    font-size: 16px;
+                }
+
+            }
+        }
+    }
+
+    .container-5 {
+        flex-direction: column;
+
+
+        .left,
+        .right {
+            width: 100%;
+
+            h2 {
+                width: 100%;
+            }
+
+            .card-testimonial {
+                margin-top: 48px;
+            }
+        }
+
+
+
+
+    }
+
+    .container-6 {
+        .technologies-container {
+            .technologies-item {
+                width: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-top: 32px;
+
+                img {
+                    height: 48px;
+                    object-fit: contain;
+
+                }
+
+                p {
+                    margin-top: 12px;
+                }
+            }
+
+        }
+    }
+
+    .container-7 {
+        h2 {
+            text-align: left;
+            line-height: 1.2;
+            max-width: 70%;
+        }
+
+        .service-why-section {
+            flex-direction: column;
+
+            .service-why-left-container {
+                gap: 48px;
+
+                .why-card {
+                    width: 100%;
+
+                    h3 {
+                        line-height: 1.2;
+                        margin-top: 24px;
+                    }
+
+                }
+            }
+
+            .service-why-right-container {
+                margin: 0;
+                margin-bottom: 48px;
+
+                h3 {
+                    align-self: flex-start;
+                    max-width: 70%;
+                }
+            }
+        }
+
+    }
+
+    .container-8 {
+        h2 {
+            line-height: 1.1;
+            max-width: 100%;
+        }
+
+    }
+
+    .container-9 {
+        .footer {
+            height: 500px;
+            flex-direction: column;
+
+            .footer-row1 {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+            }
+
+            .footer-row2 {
+                padding-top: 16px;
+                border-top: 1px solid var(--white-stroke);
+
+                .left {
+                    display: flex;
+                    gap: 18px;
+                }
+
+            }
+        }
     }
 }

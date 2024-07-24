@@ -26,6 +26,7 @@ h3 {
     line-height: 100%;
 }
 
+
 p {
     margin: 0;
     font-size: 16px;
@@ -41,4 +42,23 @@ p {
 
 .medium-text {
     font-size: 1.2em;
+}
+
+@media only screen and (max-width:480px) {
+
+    h1 {
+        font-size: 54px;
+        line-height: 90%;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 100%;
+    }
+
+    h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 100%;
+    }
 }

@@ -5,9 +5,9 @@ import './App.css';
 import { useAppContext } from './components/Common/AppContext/AppContext.js';
 import Themer from './components/Common/Themer/Themer.js';
 import { setCursorBall } from './components/Common/CustomCursor/helper.js';
-import Footer from './components/Footer/Footer.js';
+// import Footer from './components/Footer/Footer.js';
 import { HashRouter } from 'react-router-dom';
-import NavBar from './components/Navbar/NavBar.js';
+// import NavBar from './components/Navbar/NavBar.js';
 import ScrollToTop from './components/Common/ScrollToTop/ScrollToTop.js';
 import LoadingBar from './components/Common/LoadingBar/LoadingBar.js';
 
