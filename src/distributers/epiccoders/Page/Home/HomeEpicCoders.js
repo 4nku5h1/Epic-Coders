@@ -25,14 +25,16 @@ import Logo from '../../../../components/Logo/Logo';
 export default function HomeEpicCoders() {
     function ContactButton({ theme }) {
         return (
-            <Button
-                className="btn-contact-us"
-                label={'Contact Us'}
-                // onClick={() => scrollToId('FOOTER')}
-                type={'SOLID'}
-                roundedCorners
-                theme={theme}
-            />
+            <a href="tel:+919457776161">
+                <Button
+                    className="btn-contact-us"
+                    label={'Contact Us'}
+                    // onClick={() => scrollToId('FOOTER')}
+                    type={'SOLID'}
+                    roundedCorners
+                    theme={theme}
+                />
+            </a>
         );
     }
     function Rating({ theme }) {
@@ -83,25 +85,25 @@ export default function HomeEpicCoders() {
                             heading: 'Web Development',
                             paragraph:
                                 'Building custom, high-performance websites to meet your business needs.',
-                            backgroundImage: service1,
+                            backgroundImage: service2,
                         },
                         {
                             heading: 'Mobile App Development',
                             paragraph:
                                 'We develops custom mobile apps using Android and Flutter, providing smooth and engaging user experiences.',
-                            backgroundImage: service2,
+                            backgroundImage: service1,
                         },
                         {
                             heading: 'UI/UX Design',
                             paragraph:
                                 'Creating visually stunning, user-friendly designs that engage your audience.',
-                            backgroundImage: service3,
+                            backgroundImage: service4,
                         },
                         {
                             heading: 'Full Stack Development',
                             paragraph:
                                 'We provide comprehensive full stack development services, building robust and scalable solutions from front-end to back-end.',
-                            backgroundImage: service4,
+                            backgroundImage: service3,
                         },
                     ]}
                     child={item => {
@@ -308,12 +310,16 @@ export default function HomeEpicCoders() {
                     <div className="footer-row2">
                         <div className="left">
                             <p>
-                                <a href="tel:+919457776161">(+91) 9457776161</a>
+                                <a href="https://wa.me/+919457776161">Whatsapp</a>
                             </p>
                             <p>
                                 <a href="mailto:pixobrew@gmail.com?subject=Request for Editing Services&body=Hi,">
-                                    epiccoders@gmail.com
+                                    Email
                                 </a>
+                            </p>
+                            <p>
+                                {' '}
+                                <a href="tel:+919457776161">Call Now</a>
                             </p>
                             <p>South Extension 42 New Delhi, India</p>
                         </div>
