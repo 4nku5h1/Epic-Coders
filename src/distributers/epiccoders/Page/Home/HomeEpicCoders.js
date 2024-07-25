@@ -19,8 +19,9 @@ import springLogo from '../../../../assets/technologies/spring.svg';
 import ContainerSlider from '../../../../components/Common/ContainerSlider/ContainerSlider';
 
 import Navbar from '../../components/Navbar/Navbar';
-import './home.scss';
 import Logo from '../../../../components/Logo/Logo';
+
+import './home.scss';
 
 export default function HomeEpicCoders() {
     function ContactButton({ theme }) {
@@ -307,6 +308,8 @@ export default function HomeEpicCoders() {
                             <div className="item"></div>
                         </div>
                     </div>
+
+                    {/* <p>South Extension 42 New Delhi, India</p> */}
                     <div className="footer-row2">
                         <div className="left">
                             <p>
@@ -321,7 +324,6 @@ export default function HomeEpicCoders() {
                                 {' '}
                                 <a href="tel:+919457776161">Call Now</a>
                             </p>
-                            <p>South Extension 42 New Delhi, India</p>
                         </div>
                         <div className="right">
                             <p>All rights reserved Epic Coders Studio</p>
