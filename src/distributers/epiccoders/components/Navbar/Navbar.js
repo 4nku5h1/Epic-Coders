@@ -1,26 +1,8 @@
-import './styles.scss';
-import Button from '../../../../components/Common/Button/Primary/Button';
-import Logo from '../../../../components/Logo/Logo';
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import NavbarDesktop from './NavbarDesktop/NavbarDesktop';
+import NavbarMobile from './NavbarMobile/NavbarMobile';
+
 export default function Navbar() {
-    return (
-        <div className="navbar">
-            <div className="items">
-                <p>Home</p>
-                <span />
-                <p>Services</p>
-                <p>About</p>
-            </div>
-            <div className="center-logo">
-                <Logo showSubtitle={false} />
-            </div>
-            <Button
-                className="btn-contact-us"
-                label={'Contact Us'}
-                // onClick={() => scrollToId('FOOTER')}
-                type={'SOLID'}
-                roundedCorners
-                theme="LIGHT"
-            />
-        </div>
-    );
+    if (isBrowser) return <NavbarDesktop />;
+    return <NavbarMobile />;
 }

@@ -10,15 +10,17 @@ import faster from '../../../../assets/epiccoders/services/5.png';
 
 import reactNativeLogo from '../../../../assets/technologies/react-native.png';
 import nextLogo from '../../../../assets/technologies/next.webp';
+import androidLogo from '../../../../assets/technologies/android.png';
+import mongoLogo from '../../../../assets/technologies/mongo.png';
 import flutterLogo from '../../../../assets/technologies/flutter.webp';
 import graphqlLogo from '../../../../assets/technologies/graphql.png';
 import nodeLogo from '../../../../assets/technologies/node.webp';
 import postgressLogo from '../../../../assets/technologies/postgress.png';
-import devopsLogo from '../../../../assets/technologies/devops.webp';
+import devopsLogo from '../../../../assets/technologies/devops.png';
 import springLogo from '../../../../assets/technologies/spring.svg';
 import ContainerSlider from '../../../../components/Common/ContainerSlider/ContainerSlider';
 
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/NavBar/Navbar';
 import Logo from '../../../../components/Logo/Logo';
 
 import './home.scss';
@@ -163,7 +165,7 @@ export default function HomeEpicCoders() {
                                 attention to detail were top-notch, resulting in a significant boost
                                 in user engagement. Highly recommend!"
                             </p>
-                            <h5>Tina Lee</h5>
+                            <h5>Tina Leo</h5>
                             <p className="opacity-white-text">CEO, T&T</p>
                         </div>
                         <div className="card-testimonial">
@@ -173,7 +175,7 @@ export default function HomeEpicCoders() {
                                 expertise and dedication were clear throughout, and the high-quality
                                 app has been a hit with our users. We’re thrilled with the results!"
                             </p>
-                            <h5>Kunal G</h5>
+                            <h5>Kunai G</h5>
                             <p className="opacity-white-text">CEO, 24 SEVEN</p>
                         </div>
                     </ContainerSlider>
@@ -199,6 +201,10 @@ export default function HomeEpicCoders() {
                             icon: nextLogo,
                         },
                         {
+                            title: 'Android',
+                            icon: androidLogo,
+                        },
+                        {
                             title: 'Flutter',
                             icon: flutterLogo,
                         },
@@ -215,16 +221,16 @@ export default function HomeEpicCoders() {
                             icon: nodeLogo,
                         },
                         {
+                            title: 'Mongo DB',
+                            icon: mongoLogo,
+                        },
+                        {
                             title: 'PostgreSQL',
                             icon: postgressLogo,
                         },
                         {
                             title: 'DevOps',
                             icon: devopsLogo,
-                        },
-                        {
-                            title: 'Flutter',
-                            icon: flutterLogo,
                         },
                     ]}
                     child={item => {
