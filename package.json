@@ -2,7 +2,7 @@
   "name": "epiccoders",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://epiccoders.in/",
+  "homepage": "https://4nku5h1.github.io/Epic-Coders/",
   "dependencies": {
     "@motionone/utils": "^10.15.1",
     "@react-spring/parallax": "^9.7.2",
