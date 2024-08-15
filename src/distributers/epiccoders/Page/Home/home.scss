@@ -282,6 +282,7 @@ $card-border: 8px;
                     border-radius: $card-border;
 
                     img {
+                        padding: 6px;
                         background-color: var(--white);
                         border-radius: $card-border;
                         width: 40px;
@@ -348,6 +349,12 @@ $card-border: 8px;
 }
 
 .container-9 {
+    .about-bottom-text {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
     .footer {
         margin-bottom: 48px;
         border-radius: $card-border;
@@ -384,6 +391,19 @@ $card-border: 8px;
                 width: 32px;
                 border-radius: 50%;
                 background-color: var(--white);
+
+                a {
+                    width: 20px;
+                    height: 20px;
+                    padding: 0;
+
+                    img {
+                        height: inherit;
+                        width: inherit;
+                    }
+                }
+
+
             }
         }
 
@@ -548,7 +568,7 @@ $card-border: 8px;
 
     .container-9 {
         .footer {
-            height: 500px;
+            height: 300px;
             flex-direction: column;
 
             .footer-row1 {
@@ -626,7 +646,7 @@ $card-border: 8px;
         h2 {
             text-align: left;
             line-height: 1.2;
-            max-width: 70%;
+            max-width: 100%;
         }
 
         .service-why-section {

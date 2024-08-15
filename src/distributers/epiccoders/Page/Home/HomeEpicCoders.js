@@ -20,8 +20,16 @@ import devopsLogo from '../../../../assets/technologies/devops.png';
 import springLogo from '../../../../assets/technologies/spring.svg';
 import ContainerSlider from '../../../../components/Common/ContainerSlider/ContainerSlider';
 
+import agileLogo from '../../../../assets/epiccoders/whyChoose/agile.png';
+import secureLogo from '../../../../assets/epiccoders/whyChoose/secure.png';
+import seoLogo from '../../../../assets/epiccoders/whyChoose/seo.png';
+import uxLogo from '../../../../assets/epiccoders/whyChoose/ux.png';
+
 import Navbar from '../../components/NavBar/Navbar';
 import Logo from '../../../../components/Logo/Logo';
+
+import whatsappLogo from '../../../../assets/social/blackAndWhite/whatsapp.png';
+import instaLogo from '../../../../assets/social/blackAndWhite/instagram.png';
 
 import './home.scss';
 
@@ -251,25 +259,25 @@ export default function HomeEpicCoders() {
                         itemClass="why-card"
                         data={[
                             {
-                                icon: 'userLogo',
+                                icon: uxLogo,
                                 heading: 'User-Centric Design',
                                 description:
                                     'At Epic Coders, we prioritize your users with our user-centric design approach. We create intuitive, visually appealing interfaces that not only captivate but also enhance usability, ensuring a seamless and engaging experience for every visitor.',
                             },
                             {
-                                icon: 'architectureLogo',
+                                icon: agileLogo,
                                 heading: 'Using Agile Methodologies',
                                 description:
                                     'Choose Epic Coder for our Agile approach, which ensures flexibility and adaptability throughout your project. Our iterative process allows for continuous improvement and quick adjustments to meet your evolving needs',
                             },
                             {
-                                icon: 'userLogo',
+                                icon: seoLogo,
                                 heading: 'SEO-Friendly',
                                 description:
                                     'Achieve optimal search engine visibility with our SEO-friendly approach. We incorporate best practices and advanced techniques to enhance your websites ranking, ensuring it reaches the right audience and drives meaningful traffic.',
                             },
                             {
-                                icon: 'architectureLogo',
+                                icon: secureLogo,
                                 heading: 'Secure Solutions',
                                 description:
                                     'Security is a top priority. We implement robust measures and adhere to best practices to protect your data, ensuring that your digital solutions are safeguarded against potential threats.',
@@ -309,9 +317,17 @@ export default function HomeEpicCoders() {
                     <div className="footer-row1">
                         <Logo showSubtitle={false} />
                         <div className="link-items">
-                            <div className="item"></div>
+                            <div className="item flex-center">
+                                <a href="https://wa.me/+919457776161" className="flex-center">
+                                    <img src={whatsappLogo} />
+                                </a>
+                            </div>
 
-                            <div className="item"></div>
+                            <div className="item flex-center">
+                                <a href="https://wa.me/+919457776161" className="flex-center">
+                                    <img src={instaLogo} />
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -319,16 +335,13 @@ export default function HomeEpicCoders() {
                     <div className="footer-row2">
                         <div className="left">
                             <p>
-                                <a href="https://wa.me/+919457776161">Whatsapp</a>
-                            </p>
-                            <p>
                                 <a href="mailto:pixobrew@gmail.com?subject=Request for Editing Services&body=Hi,">
-                                    Email
+                                    pixobrew@gmail.com
                                 </a>
                             </p>
                             <p>
                                 {' '}
-                                <a href="tel:+919457776161">Call Now</a>
+                                <a href="tel:+919457776161">+91 9457776161</a>
                             </p>
                         </div>
                         <div className="right">
@@ -336,6 +349,9 @@ export default function HomeEpicCoders() {
                         </div>
                     </div>
                 </div>
+                <h2 className="about-bottom-text opacity-dark-text">
+                    Epic Coders | Website Design And Development | Best Web Development Agency
+                </h2>
             </Container>
         </>
     );
